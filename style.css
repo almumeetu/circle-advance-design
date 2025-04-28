@@ -46,9 +46,21 @@ body{
     align-items: center;
     justify-content: center;
 }
+.main-container .icon .imgBox.active{
+    box-shadow: 0 0 0 6px #222,
+    0 0 0 12px #ff1d50;
+}
 .main-container .icon .imgBox img{
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    filter: grayscale(1);
+}
+.main-container .icon .imgBox.active img{
+    filter: grayscale(0);
 }
